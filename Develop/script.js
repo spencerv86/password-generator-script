@@ -3,12 +3,11 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 
-
 var upperChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var lowerChar = ["abcdefghijklmnopqrstuvwxyz"];
 var numChar = ["1234567890"];
 var specChar = ["~!@#$%^&*()-_=+<>?"];
-
+var charPool = "";
 
 function writePassword() {
   var password = generatePassword();
@@ -17,20 +16,48 @@ function writePassword() {
   passwordText.value = password;
 }
 
-
 function generatePassword() {
-  var pwLength = prompt(
-    "How long would you like your password to be? (Please enter a number between 8-128)");
-  var upperQ = confirm("Would you like to add uppercase letters to your password?");
-  var lowerQ = confirm("Would you like to add lowercase letters to your password?");
-  var numQ = confirm("Would you like to add numeric characters to your password? (Ex: '1', '2', '7')");
-  var specQ = confirm("Would you like to add special characters to your password? (Ex: '?', '@', '$')");
 
-  
+  var pwLength = prompt(
+    "How long would you like your password to be? (Please enter a number between 8-128)"
+  );
+  while (pwLength < 8 || pwLength > 128) {
+    pwLength = prompt("Sorry! That's an invalid character limit. Please try again. It must be between 8-128.");
+  } 
+
+  var upperQ = confirm(
+    "Would you like to add uppercase letters to your password?"
+  );
+  if (upperQ === true) {
+    charPool = charPool.concat(upperChar);
+  }
+
+  var lowerQ = confirm(
+    "Would you like to add lowercase letters to your password?"
+  );
+  if (lowerQ === true) {
+    charPool = charPool.concat(lowerChar);
+  }
+
+  var numQ = confirm(
+    "Would you like to add numeric characters to your password? (Ex: '1', '2', '7')"
+  );
+  if (numQ === true) {
+    charPool = charPool.concat(numChar);
+  }
+
+  var specQ = confirm(
+    "Would you like to add special characters to your password? (Ex: '?', '@', '$')"
+  );
+  if (specQ === true) {
+    charPool = charPool.concat(specChar);
+  }
+
+
+
+
   return "temporary password";
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
