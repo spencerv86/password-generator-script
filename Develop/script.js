@@ -8,6 +8,7 @@ var lowerChar = ["abcdefghijklmnopqrstuvwxyz"];
 var numChar = ["1234567890"];
 var specChar = ["~!@#$%^&*()-_=+<>?"];
 var charPool = "";
+var pwGen = "";
 
 function writePassword() {
   var password = generatePassword();
@@ -53,11 +54,25 @@ function generatePassword() {
     charPool = charPool.concat(specChar);
   }
 
+  console.log(pwLength);
+  console.log(charPool);
+
+  for(var i = 0; i < pwLength; i++) {
+    var random = Math.floor(Math.random() * charPool.length);
+    pwGen = pwGen.concat(charPool.charAt(random));
+    console.log("Generated password is: " + pwGen);
+  }
 
 
+  
 
-  return "temporary password";
+  return "Your password is " + pwGen;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// for (var i = 0; i < pwLength; i++){
+//   var result = charPool.charAt(Math.floor(Math.random() * charPool.length));
+// }
