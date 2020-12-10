@@ -7,8 +7,6 @@ var upperChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var lowerChar = ["abcdefghijklmnopqrstuvwxyz"];
 var numChar = ["1234567890"];
 var specChar = ["~!@#$%^&*()-_=+<>?"];
-var charPool = "";
-var pwGen = "";
 
 function writePassword() {
   var password = generatePassword();
@@ -18,13 +16,17 @@ function writePassword() {
 }
 
 function generatePassword() {
+  var charPool = "";
 
   var pwLength = prompt(
-    "How long would you like your password to be? (Please enter a number between 8-128)"
+    "How long would you like your password to be? \n(Please enter a number between 8-128)"
   );
-  while (pwLength < 8 || pwLength > 128) {
-    pwLength = prompt("Sorry! That's an invalid character limit. Please try again. It must be between 8-128.");
-  } 
+  // console.log(parseInt(pwLength));
+  while (pwLength < 8 || pwLength > 128 || isNaN(parseInt(pwLength))) {
+    pwLength = prompt(
+      "Sorry! That's an invalid character limit. \nPlease try again. \nIt must be between 8-128."
+    );
+  }
 
   var upperQ = confirm(
     "Would you like to add uppercase letters to your password?"
@@ -56,22 +58,20 @@ function generatePassword() {
 
   console.log(pwLength);
   console.log(charPool);
+  var pwGen = "";
 
-  for(var i = 0; i < pwLength; i++) {
-    var random = Math.floor(Math.random() * charPool.length);
-    pwGen = pwGen.concat(charPool.charAt(random));
-    console.log("Generated password is: " + pwGen);
+  for (var i = 0; i < pwLength; i++) {
+    var randNum = Math.floor(Math.random() * charPool.length);
+    pwGen = pwGen.concat(charPool.charAt(randNum));
   }
 
-
-  
+  console.log(pwGen);
 
   return "Your password is " + pwGen;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
 
 // for (var i = 0; i < pwLength; i++){
 //   var result = charPool.charAt(Math.floor(Math.random() * charPool.length));
