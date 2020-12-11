@@ -1,95 +1,71 @@
-# password-generator-script
+# A Password Generator Script
 
-# 03 JavaScript: Password Generator
+## Description
 
-## Your Task
+For this assignment, our goal was to fill out the javascript to allow this pre-built password generator site to run as predicted. Its purpose was to appropriately generate a random string of characters for a password based on a criteria set by the user. On beginning the process, the user could dictate how long their password would be and whether or not to include letters, either uppercase ('A', 'B', 'C') or lowercase ('a', 'b', 'c'), numbers ('1', '2', '3') or special characters ('?', '!', '@'). After deciding their preferred criteria, the password will appear in the box below.
 
-This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+------------
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+The deployed and functional site can be found here: <https://spencerv86.github.io/password-generator-script/>
 
-## User Story
+The full process can be found on my [Github](https://github.com/spencerv86/password-generator-script) repository linked here:
+<https://github.com/spencerv86/password-generator-script>
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+-------
 
-## Acceptance Criteria
+## Table of Contents
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
-## Mock-Up
+------
 
-The following image shows the web application's appearance and functionality:
+## Installation
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+To install and test the generator, fork and clone the repository from my [GitHub (linked here)](https://github.com/spencerv86/password-generator-script), view the code in your preferred client (I use VSCode), and open the program in your preferred browser to see the generator in action!
 
-## Grading Requirements
+If you'd just like to see the finished product in browser without looking at the code, feel free to visit https://spencerv86.github.io/password-generator-script/  
 
-This homework is graded based on the following criteria: 
+------
 
-### Technical Acceptance Criteria: 40%
+## Usage
 
-* Satisfies all of the above acceptance criteria plus the following:
+To generate a password, first click the large "Generate Password" button and then answer the subsequent questions to determine the criteria of your password. With the questions you can determine the length of your password and choose to include upper and lowercase letters, numbers and special characters. 
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+An example of the final generated password can be seen below: (Sorry, it's not one of my *actual* passwords!)
 
-### Deployment: 32%
+![password-generator-screenshot](./develop/Assets/final-password-product.png)
 
-* Application deployed at live URL.
+------
 
-* Application loads with no errors.
+## Credits
 
-* Application GitHub URL submitted.
+Thanks to my cohort for helping throughout this one! SPecial shout-outs to Pete, Nathan, Jeana Rose, John, Ike and Ike for this one. As well as Peter the TA for helping me with one pesky issue.
 
-* GitHub repository that contains application code.
+-------
 
-### Application Quality: 15%
+## License
 
-* Application user experience is intuitive and easy to navigate.
+MIT License
 
-* Application user interface style is clean and polished.
+Copyright (c) [2020] [Spencer Vaughan]
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Repository Quality: 13%
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
