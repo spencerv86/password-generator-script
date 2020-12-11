@@ -36,7 +36,7 @@ To generate a password, first click the large "Generate Password" button and the
 
 An example of the final generated password can be seen below: (Sorry, it's not one of my *actual* passwords!)
 
-![password-generator-screenshot](./develop/Assets/final-password-product.png)
+![password-generator-screenshot](https://raw.githubusercontent.com/spencerv86/password-generator-script/main/Develop/Assets/03-javascript-homework-demo.png)
 
 ------
 
